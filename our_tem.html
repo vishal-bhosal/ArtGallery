@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <!-- aos link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.gallery-item-overlay h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- nav section   border-bottom   #694F5D-->
+
+
+
+  <nav class="navbar navbar-expand-lg bg-white px-4 ">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1" href="./index.html">Image- <span class="text-secondary"> Gallery</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item px-1 ">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link active" aria-current="page" href="./Galley.html">Gallery</a>
+          </li>
+          <li class="nav-item px-1"></li>
+          <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+          </li>
+          <li class="nav-item px-1"></li>
+          <a class="nav-link active" aria-current="page" href="./services.html">Service</a>
+          </li>
+          <li class="nav-item px-1 ">
+            <a class="nav-link active" aria-current="page" href="./our_tem.html">Our tem</a>
+          </li>
+<!-- 
+          <form class="d-flex " role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+ 
+           
+
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <!-- end nav section     https://cdn.pixabay.com/photo/2024/05/15/07/59/flowers-8763039_1280.jpg -->
+
+  
+  <!-- start teme section  -->
+
+  <section class="tame m-5 text-center">
+    <div class="container">
+
+
+    
+
+
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body" data-aos="fade-right">
+              <a href="./camerManDetal.html"><img class="img-fluid p-2 rounded-circle border-primary"
+                  src="./image/person1.avif" alt=""></a>
+              <a style="text-decoration: none; color: black;"  href="./camerManDetal.html">
+                <h5 class="card-title  mt-4">uttkarsh more</h5>
+              </a>
+              <a style="text-decoration: none; color: black;" href="./camerManDetal.html">
+                <p class="card-text">i am profisionala photo grapher.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body " data-aos="fade-up">
+              <a href="./camera_mandetal2.html"> <img class="img-fluid p-2 rounded-circle border-primary"
+                  src="./image/person2.avif" alt=""></a>
+              <a style="text-decoration: none; color: black;" href="./camera_mandetal2.html">
+                <h5 class="card-title  mt-4"> rohan jadhav</h5>
+              </a>
+              <a style="text-decoration: none; color: black;" href="./camera_mandetal2.html">
+                <p class="card-text">...Event and lifestyle photography.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body " data-aos="fade-left">
+           <a  href="./camera_man3.html">   <img class="img-fluid p-2 rounded-circle border-primary" src="./image/person3.avif" alt=""></a>
+           <a style="text-decoration: none; color: black;" href="./camera_man3.html">   <h5 class="card-title mt-4"> harsh chavan</h5></a>
+            <a style="text-decoration: none; color: black;" href="./camera_man3.html">   <p class="card-text">...Adobe Lightroom & Photoshop.</p></a>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div></div>
+
+
+  </section>
+
+
+
+
+  
+  <!-- start teme section  -->
+
+  <section class="tame m-5 text-center">
+    <div class="container">
+
+
+     
+
+
+
+      <div class="row " >
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body" data-aos="fade-right">
+              <a href="./guri.html"><img class="img-fluid p-2 rounded-circle border-primary"
+                  src="./image/temgirl2.avif" alt=""></a>
+              <a style="text-decoration: none; color: black;"  href="./guri.html">
+                <h5 class="card-title  mt-4">gauri patlie</h5>
+              </a>
+              <a style="text-decoration: none; color: black;" href="./guri.html">
+                <p class="card-text"> profisionala photo grapher.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body " data-aos="fade-up">
+              <a href="./anu.html"> <img class="img-fluid p-2 rounded-circle border-primary"
+                  src="./image/teamgirl1.avif" alt=""></a>
+              <a style="text-decoration: none; color: black;" href="./anu.html">
+                <h5 class="card-title  mt-4">anu bhosale</h5>
+              </a>
+              <a style="text-decoration: none; color: black;" href="./anu.html">
+                <p class="card-text">lifestyle photography.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12 pt-4">
+          <div class="card">
+            <div class="card-body " data-aos="fade-left">
+           <a  href="./divay.html">   <img class="img-fluid p-2 rounded-circle border-primary" src="./image/teamgirl3.avif" alt=""></a>
+           <a style="text-decoration: none; color: black;" href="./divay.html">   <h5 class="card-title mt-4">divy shinde</h5></a>
+            <a style="text-decoration: none; color: black;" href="./divay.html">   <p class="card-text">... love photography.</p></a>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div></div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- footer section  -->
+
+ 
+  <section class="footer bg-black text-white text-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3 col-lg-3 col-sm-12 col-12" >
+          <h3 style="padding-top: 20px;">Art Gallery</h3>
+          
+          <form action="">
+           <p>this is the word bis the part of art  est compny all over</p>
+            
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur dolore non quasi animi iste ad consequatur nisi. Corrupti soluta eos</p>
+          
+          </form>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-12 col-12">
+            <h3 style="padding-top: 20px;">Get in tuch</h3>
+
+            <h6>bhosalev883@gmail.com</h6>
+            
+           
+            <h6>morev553@gmail.com</h6>
+           
+            
+
+        </div>
+
+
+        <div class="col-md-3 col-lg-3 col-sm-12 col-12">
+          <h3 class="text-white" style="padding-top: 20px;">contect us</h3>
+          <h6>linkedin</h6>
+          <h6>instagram</h6>
+          <h6>facebook</h6>
+          <h6>twitter</h6>
+
+         
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-12 col-12">
+          <h5 class="text-white" style="padding-top: 20px;">Where Imagination Meets Inspiration</h5>
+             <h6>Find Beauty</h6>
+             <h6>Find Inspiration</h6>
+             <h6>Our Community</h6>
+
+
+
+        </div>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- end footer sectioon  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="/script.js"> </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
